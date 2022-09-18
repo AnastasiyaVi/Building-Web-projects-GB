@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Datetime superapp</title> 
+        <script src="./src/main.js" type="module"></script> 
+    </head> 
+    <body> 
+<div>
+    <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item-calc"><a class="link menu__link" href="#">Калькулятор дат</a></li>
+          <li class="menu__item-timer"><a class="link menu__link" href="#">Таймер</a></li>
+        </ul>
+      </nav>
+
+    <form class="datecalc" id="datecalc"> 
+        <h3 class="datecalc__title">Калькулятор дат</h3> 
+        <label class="datecalc__label"> 
+            <strong class="datecalc__title--strong">Первая дата:</strong> 
+            <input class="datecalc__input" type="date" name="firstDate"/> 
+        </label> 
+        <label class="datecalc__label"> 
+            <strong class="datecalc__title--strong">Вторая дата:</strong> 
+            <input class="datecalc__input" type="date" name="secondDate"/> 
+        </label> 
+        <button class="datecalc__btn" type="submit">Расчитать промежуток</button> 
+        <p class="datecalc__result" id="datecalc__result"></p> 
+    </form> 
+
+
+    <form class="timer__form">
+        <h3 class="timer__title">Таймер</h3>
+        <p class="timer__text">Выберите единицу времени</p>
+          <select class="timer__select">
+            <option value="hours">Часы</option>
+            <option value="minutes" >Минуты</option>
+            <option value="seconds" selected="selected">Секунды</option>
+          </select>
+          <p class="timer__text">Установите количество единиц</strong>
+          <input class="timer__input"  type="number" value = "5" placeholder="Введите число">
+          <button class="timer__set-btn" type="submit" >Начать</button>
+          <p class="timer__countdown">00 : 00 : 00</p>    
+        <div class="timer__buttons">
+          <button class="timer__stop-btn" disabled>Стоп</button>
+          <button class="timer__reset-btn" disabled>Обнулить</button>
+        </div>
+        </form>
+        <audio class="timer__gong" src="./src/gong.mp3"></audio>
+</div>
+        
+    </body> 
+</html>
