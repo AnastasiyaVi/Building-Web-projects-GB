@@ -1,14 +1,23 @@
 import { diffDates, diffToHtml } from "./datecalc.js";
 import { formatError } from "./utils.js";
-import "./timer.js"
-import "./moduleLink.js"
-//import "./timerGong.js"
+import { timer } from './timer.js'
+
+const timerInput = document.querySelector('#timer')
+const buttonStart = document.querySelector('.button-start')
 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
 
 dateCalcForm.addEventListener("submit", handleCalcDates);
+buttonStart.addEventListener('click', setTimer)
 
+function setTimer(event) {
+    event.preventDefault();
+    timer(timerInput.value)
+};
+function clearTime(event) {
+
+}
 function handleCalcDates(event) {
     dateCalcResult.innerHTML = "";
     event.preventDefault();
