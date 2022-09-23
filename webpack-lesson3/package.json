@@ -1,0 +1,26 @@
+{
+    "name": "lesson3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "cleanup": "npx shx rm -rf build",
+        "dev": "npm run cleanup && webpack --mode=development",
+        "build": "webpack --mode=production",
+        "serve": "webpack serve --mode=development"
+    },
+    "author": "Pavel Leonovich",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^6.2.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.3.2",
+        "img-optimize-loader": "^1.0.7",
+        "sass": "^1.38.0",
+        "sass-loader": "^12.1.0",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.51.1",
+        "webpack-cli": "^4.8.0",
+        "webpack-dev-server": "^4.0.0"
+    }
+}
